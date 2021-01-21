@@ -72,15 +72,7 @@ jobs:
       - name: Build with Maven
         run: mvn clean --batch-mode --update-snapshots verify -Dquarkus.package.type=fast-jar 
 
-      # Get current time
-      - name: Get current time
-        uses: 1466587594/get-current-time@v2
-        id: current-time
-        with:
-          format: YYYYMMDD-HHMMSS
-          utcOffset: "+01:00"
-
-      # Build and push a JVM image
+      # Build and push a Fast-Jar image
       - name: Build and push JVM image
         id: docker_build
         uses: docker/build-push-action@v2
