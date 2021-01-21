@@ -58,4 +58,4 @@ jobs:
           context: .
           file: ./src/main/docker/Dockerfile.jvm
           push: true
-          tags: user/app:${{ steps.current-time.outputs.time }}-jvm
+          tags: serrodcal/rest-santa:${{ steps.current-time.outputs.time }}-jvm
