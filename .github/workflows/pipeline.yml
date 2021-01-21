@@ -50,6 +50,14 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      # Get current time
+      - name: Get current time
+        uses: 1466587594/get-current-time@v2
+        id: current-time
+        with:
+          format: YYYYMMDD-HHMMSS
+          utcOffset: "+01:00"
+
       # Build and push a JVM image
       - name: Build and push JVM image
         id: docker_build
@@ -58,4 +66,4 @@ jobs:
           context: .
           file: ./src/main/docker/Dockerfile.jvm
           push: true
-          tags: serrodcal/rest-santa:${{ steps.current-time.outputs.time }}-jvm
+          tags: serrodcal/rest-santa:${{ steps.current-time.outputs.formattedTime }}-jvm
