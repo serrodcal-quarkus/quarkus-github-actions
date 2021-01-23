@@ -1,4 +1,4 @@
-![Quarkus CI JVM](https://github.com/serrodcal/quarkus-github-actions/workflows/Quarku%20CI%20JVM/badge.svg)
+![Quarkus CI JVM](https://github.com/serrodcal/quarkus-github-actions/workflows/Quarkus%20CI%20JVM/badge.svg)
 
 # quarkus-github-action
 
